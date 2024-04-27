@@ -1,11 +1,12 @@
 import getAllNews from "@/utils/getAllNews";
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 
 const CategoryList = async () => {
     const { data: allCategoies } = await getAllNews();
     // console.log(allCategoies)
     return (
-        <Box>
+        <Box className='bg-gray-100 px-8 py-3'>
             <Typography variant="h5" fontWeight="bold">
                 Categories
             </Typography>
@@ -13,9 +14,9 @@ const CategoryList = async () => {
             <Stack rowGap={1} className="my-4">
                 {
                     allCategoies.map(category => (
-                        <Button variant="outlined" key={category.id}>
-                            {category.title}
-                        </Button>
+                        <Link className="w-full" href={`news?category=${category.title.toLowerCase()}`} key={category.id}>
+                            <Button className="w-full" variant="outlined">{category.title}</Button>
+                        </Link>
                     ))
                 }
             </Stack>

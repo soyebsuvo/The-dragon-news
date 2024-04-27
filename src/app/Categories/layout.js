@@ -7,8 +7,8 @@ const layout = ({ children }) => {
       <Container>
         <Grid
           container
-          spacing={1}
-          className="justify-center items-center my-3"
+          spacing={3}
+          className="my-3"
         >
           <Grid item xs={4}>
             <CategoryList />
