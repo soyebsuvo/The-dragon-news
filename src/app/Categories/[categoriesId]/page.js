@@ -16,9 +16,9 @@ const DynamicPage = async ({ params, searchParams }) => {
   const { data } = await getNewsByCategory(searchParams.category);
   return (
     <Box>
-        <Typography className="text-2xl font-bold mb-3">
-            News Of {searchParams.category}
-        </Typography>
+      <Typography className="text-2xl font-bold mb-3">
+        News Of {searchParams.category}
+      </Typography>
       <Grid
         className=""
         container
@@ -30,25 +30,27 @@ const DynamicPage = async ({ params, searchParams }) => {
             <Card>
               <CardActionArea>
                 <CardMedia>
-                  <Image src={news.thumbnail_url} alt="topnews" width={800} height={200}/>
+                  <Image
+                    src={news.thumbnail_url}
+                    alt="topnews"
+                    width={800}
+                    height={200}
+                  />
                 </CardMedia>
                 {/* <p className="mt-3 text-sm ml-3 max-w-fit bg-red-500 py-1 px-2 text-white rounded">Technology</p> */}
                 <CardContent>
                   <Typography className="font-bold" gutterBottom>
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                    Again
+                    {news.title}
                   </Typography>
                   <Typography
                     className="my-3"
                     variant="body2"
                     color="text.secondary"
                   >
-                    By Soyeb Suvo - Mar 18 2023
+                    By {news.author.name} - {news.author.published_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout........
+                    {news.details.slice(0, 200)}
                   </Typography>
                 </CardContent>
               </CardActionArea>
