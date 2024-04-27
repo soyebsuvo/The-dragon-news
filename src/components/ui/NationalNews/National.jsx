@@ -24,6 +24,7 @@ const National = () => {
                     </CardContent>
                 </CardActionArea>
             </Card>
+            <hr className="mt-14"/>
             <Grid className="my-6" container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={6}>
                     <Card>
