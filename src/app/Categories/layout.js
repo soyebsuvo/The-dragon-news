@@ -1,6 +1,7 @@
+import CategoryList from "@/components/ui/CategoryList/CategoryList";
 import { Box, Container, Grid } from "@mui/material";
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
     <Box>
       <Container>
@@ -10,7 +11,7 @@ const layout = ({children}) => {
           className="justify-center items-center my-3"
         >
           <Grid item xs={4}>
-            <h2>Categories</h2>
+            <CategoryList />
           </Grid>
           <Grid item xs={8} className="space-y-2">
             {children}

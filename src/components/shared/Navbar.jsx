@@ -29,19 +29,19 @@ const navItems = [
   },
   {
     route: "Category",
-    path: "category",
+    path: "/Categories/news",
   },
   {
     route: "News",
-    path: "news",
+    path: "/news",
   },
   {
     route: "Post",
-    path: "post",
+    path: "/post",
   },
   {
     route: "Contact",
-    path: "contact",
+    path: "/contact",
   },
 ];
 
